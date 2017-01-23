@@ -11,13 +11,12 @@ let A = Matrix([
 function power(mtrx,p){
   let total = mtrx;
   for(let a =0; a < p; a++){
-    total = total.prod(mtrx);
+    total = Matrix(total.prod(mtrx));
+
   }
   return total;
-    //mtrx is the matrix you input
-    //p is the power of the matrix you want
 }
 
 
 //testing code
-console.log(power(A,10));
+console.log(power(A,10)());
